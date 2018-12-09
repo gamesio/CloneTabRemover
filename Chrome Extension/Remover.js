@@ -1,14 +1,15 @@
-chrome.history.onVisited.addListener(function(result)
+chrome.history.onVisited.addListener(function(pageOpenedHistory)
 	{	
-		chrome.tabs.query({"url": result.url}, function(tabArr)
+		chrome.tabs.query({"url": pageOpenedHistory.url}, function(openedTabs)
 		{
-			for(var i = 0; i < tabArr.length; i++)
-			{
-				if(tabArr[i].status == "loading" && tabArr.length > 1)
-					chrome.tabs.remove(tabArr[i].id);
-				else
-					chrome.tabs.update(tabArr[i].id, {"active": true});
-			}
+			if(openedTabs.length > 1)
+				for(var i = 0; i < openedTabs.length; i++)
+				{
+					if(openedTabs[i].status == "loading")
+						chrome.tabs.remove(openedTabs[i].id);
+					else
+						chrome.tabs.update(openedTabs[i].id, {"active": true});
+				}
 		})
 	}
 );
