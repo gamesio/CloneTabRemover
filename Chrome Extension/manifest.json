@@ -1,6 +1,6 @@
 {
 	"name": "Clone Tab Remover",
-	"version": "1.0",
+	"version": "1.01",
 	"description": "Help you to eliminate redundant pages.",
 	"permissions": ["history", "tabs"],
 	"background": {
