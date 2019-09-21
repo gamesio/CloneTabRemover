@@ -1,0 +1,18 @@
+{
+	"name": "Clone Tab Remover",
+	"version": "1.01",
+	"description": "Help you to eliminate redundant pages.",
+	"permissions": ["history", "tabs"],
+	"background": {
+		"scripts": ["Remover.js"],
+		"persistent": false
+	},
+	"browser_action":{
+		"default_icon": {
+			
+		},
+		"default_title": "Tab Remover",
+		"default_popup": "popup.html"
+	},
+	"manifest_version": 2
+}

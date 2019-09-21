@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+li {
+    width:40%;
+    background: #9b9b9b;
+    margin: 1em;
+}
+
+li:last-child{
+    background: #5c5c5c;
+    margin: 1em;
+}
+
+ul{
+    background: #5c5c5c;
+    list-style: none;
+}
+
+.container{
+    text-align: center;
+}
